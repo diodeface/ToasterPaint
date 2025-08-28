@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>ToasterPaint</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div id="photo-container" class="box">
+                <div id="photo"></div>
+            </div>
+            <div id="canvases" class="box"></div>
+            <div id="output" class="box">
+                <span>bitmap format:</span>
+                <input type="radio" id="binary" name="imgformat"/>
+                <label for="binary">binary</label>
+                <input type="radio" id="hex" name="imgformat" checked/>
+                <label for="hex">hex</label>
+                <p id="message">
+                    ToasterPaint<br>
+                    ----<br>
+                    Draw on the canvases to superimpose them on the preview photo.<br>
+                    Click copy to copy the result to clipboard.<br>
+                    Click load to load a bitmap from the clipboard. Must be in hex or binary format.<br>
+                    Click reset to reset the canvas.<br>
+                    ----<br>
+                    To change the photo and display positions, modify the constants in main.js<br>
+                </p>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
