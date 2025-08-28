@@ -59,6 +59,11 @@ DISPLAYS.forEach(display => {
     resetCanvas(canvas);
 
     canvas.addEventListener('mousemove', drawPixel);
+    canvas.addEventListener('mousedown', (e) => {
+        drawColor = e.button === 2 ? BACKGROUND_COLOR : LED_COLOR;
+        isDrawing = true;
+        drawPixel(e);
+    });
 
     // functions
     function drawPixel(e) {
